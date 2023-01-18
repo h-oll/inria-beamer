@@ -1,0 +1,4 @@
+* Usage
+1. Import the repo as a git submodule
+2. =ln -s beamerstyle inria-style/beamerstyle=
+3. In org mode, use =#+BEAMER_THEME: /inria=

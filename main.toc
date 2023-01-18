@@ -1,4 +1,0 @@
-\beamer@sectionintoc {1}{Titre du chapitre}{3}{0}{1}
-\beamer@sectionintoc {2}{Titre du chapitre}{6}{0}{2}
-\beamer@sectionintoc {3}{Titre du chapitre}{8}{0}{3}
-\beamer@sectionintoc {4}{Conclusion}{10}{0}{4}
