@@ -1,4 +1,4 @@
 * Usage
 1. Import the repo as a git submodule
-2. =ln -s inria-beamer/beamertheme beamertheme =
+2. =ln -s inria-beamer/beamertheme/beamerthemeinria.sty beamerthemeinria.sty=
 3. In org mode, use =#+BEAMER_THEME: /inria=
