@@ -1,9 +1,9 @@
-
 \mode<presentation>
 
-\setbeamerfont{frametitle}{size=\normalsize}
-
-
+\definecolor{rouge_inria} {RGB}{230,51,18}
+\definecolor{gris_fonce_inria}{RGB}{56,66,87}
+\definecolor{rouge2}{RGB}{230,68,57} 
+\definecolor{gris_clair_inria}{RGB}{217,217,217}
 
 \definecolor{exampleColor}{HTML}{1c7c54}
 \definecolor{sectionColor}{RGB}{0,0,0}
@@ -23,7 +23,7 @@
 \definecolor{bodyColor}{RGB}{255,255,255}
 \definecolor{normalTextColor}{RGB}{0,0,0}
 \definecolor{exampleTextColor}{HTML}{1c7c54}%{RGB}{0,0,204}
-\definecolor{alertTextColor}{RGB}{0,0,204}%{0,205,0}
+\definecolor{alertTextColor}{RGB}{230,51,18}
 \definecolor{chipColor}{RGB}{230,51,18}
 \definecolor{chipTextColor}{RGB}{255,255,255}
 \definecolor{normalBlockColor}{RGB}{217,217,217}
@@ -42,10 +42,6 @@
 \definecolor{alertBlockTextColor}{RGB}{0,0,0}
 \definecolor{alertBlockTitleTextColor}{RGB}{255,255,255}
 
-\definecolor{rouge_inria} {RGB}{230,51,18}
-\definecolor{gris_fonce_inria}{RGB}{56,66,87}
-\definecolor{rouge2}{RGB}{230,68,57} 
-\definecolor{gris_clair_inria}{RGB}{217,217,217}
 
 \setbeamercolor{section in head/foot}{bg=sectionColor, fg=sectionTextColor}
 \setbeamercolor{section number projected}{bg=white,fg=rouge_inria}
@@ -67,15 +63,14 @@
 \setbeamercolor{institute in head/foot}{fg=instituteColor}
 \setbeamercolor{date in head/foot}{bg=rightFootlineColor, fg=dateColor}
 
-\setbeamercolor{itemize items}{fg=rouge_inria}
-\setbeamercolor{itemize subitems}{fg=rouge_inria}
+\setbeamercolor*{item}{fg=rouge_inria}
 
-
+%\setbeamercolor{itemize items}{fg=rouge_inria}
+%\setbeamercolor{itemize subitems}{fg=rouge_inria}
 
 \newcommand{\blue}{\color{middleFootlineColor}}
 \newcommand{\green}{\color{exampleColor}}
 \newcommand{\orange}{\color{alertTitleBlockColor}}
 \newcommand{\red}{\color{normalBlockTitleTextColor}}
-
 
 \mode<all>

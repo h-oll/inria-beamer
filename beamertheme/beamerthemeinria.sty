@@ -13,25 +13,26 @@
 \RequirePackage{fmtcount}
 \RequirePackage{calc}
 
-\useinnertheme{inria}
-\useoutertheme{inria}
-\usecolortheme{inria}
+\usepackage{beamerthemeinria/beamerinnerthemeinria} 
+\usepackage{beamerthemeinria/beamerouterthemeinria}
+\usepackage{beamerthemeinria/beamercolorthemeinria}
+%\useinnertheme{inria}
+%\useoutertheme{inria}
+%\usecolortheme{inria}
 
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{blocks}[]%rounded]
 % \setbeamertemplate{blocks}[rounded] 
 
-
 \setbeamerfont{block title}{size={}}
-
 
 \renewcommand{\sfdefault}{lmss}
 \sffamily
 
-%\setbeamersize{text margin left=1cm,text margin right=1cm}
+\setbeamersize{text margin left=0.6cm,text margin right=0.6cm}
 
 %% Uncomment to hide bounding boxes around elements
-%\TPshowboxesfalse
+\TPshowboxesfalse
 
 \hypersetup{allcolors=rouge_inria,}
 
@@ -39,20 +40,6 @@
 \newcommand{\Grand}{\fontsize{80}{80}\selectfont}
 \newcommand{\grand}{\fontsize{60}{60}\selectfont}
 
-% \useinnertheme[shadow=false]{rounded}
-% \setbeamercolor{item projected}{bg=chipColor,fg=chipTextColor}
-% \setbeamerfont{section number projected}{%
-% family=\rmfamily,series=\bfseries,size=\normalsize}
-
-
-\setbeamertemplate{section number projected}{default}
-\setbeamertemplate{enumerate items}[default]
-\setbeamertemplate{enumerate subitems}[default]
-% \setbeamertemplate{item projected}[default]
-\setbeamertemplate{itemize items}{$\color{rouge_inria}\bullet$}
-\setbeamertemplate{itemize subitem}{$\color{rouge_inria}{>}$}
-\setbeamertemplate{itemize subsubitem}{$\color{black}{-}$}
-% \setbeamertemplate{enumerate items}{$\color{rouge_inria}{\bullet}$}
 \setbeamertemplate{section in toc}{\textcolor{rouge_inria}{{\two@digits{\inserttocsectionnumber}}.}.~\textcolor{white}{\inserttocsection}}
 
 \pgfdeclarehorizontalshading[frametitle.bg,frametitle right.bg]{beamer@frametitleshade}{\paperheight}{%

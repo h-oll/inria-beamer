@@ -24,13 +24,14 @@
     \ifnum\thepage>1\relax%
       \filldraw [color=gris_clair_inria] (0,0) -- (0,9.6) -- (12.8,9.6) -- (12.8,0) -- cycle;
       \filldraw [color=rouge_inria]      (0,9.6) -- (0,5.6)  -- (4,5.6) -- (4,9.6) -- cycle;
-      \filldraw [color=white]            (0.3,0.3) -- (0.3,9.3) -- (12.5,9.3) -- (12.5,0.3) -- cycle;
+      \filldraw [color=white]            (0.3,0.3) -- (0.3,9.0) -- (12.5,9.0) -- (12.5,0.3) -- cycle;
     \fi
 
     \ifnum\thepage=1\relax%
       \filldraw [color=white]            (0,0) -- (0,9.6) -- (12.8,9.6) -- (12.8,0) -- cycle;
-      \filldraw [color=gris_fonce_inria] (0.3,0.3) -- (0.5,9.3) -- (12.5,9.3) -- (12.5,0.3) -- cycle;
+      \filldraw [color=gris_fonce_inria] (0.3,0.3) -- (0.3,9.0) -- (12.5,9.0) -- (12.5,0.3) -- cycle;
       \filldraw [color=rouge_inria]      (0,9.6) -- (0,5.6)  -- (4,5.6) -- (4,9.6) -- cycle;
+      \node at (2,7.6) {\includegraphics[width=3cm]{beamerthemeinria/inria-logo-blanc.png}};
       
     \fi
   \end{tikzpicture}
@@ -50,50 +51,51 @@
 
 \defbeamertemplate*{section page}{inria}[1][]
 {
-  % draw full square 
-  \begin{tikzpicture}          
+  \begin{tikzpicture}
+    %% for regular slides, the origin is shifted by the amount of the
+    %% margins
+    %% the 0,0 coordinate is shifted by .6cm to the
+    %% right and .04cm to the bottom. So need to compensate by moving
+    %% -1cm horizontally and .03cm vertically
     \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
-    \filldraw [color=gris_clair_inria] (0,15) -- (12.8,15) -- (12.8,0) -- (0,0) -- cycle;
-    \filldraw [color=white]  (0.4,14.6) -- (12.4,14.6) -- (12.4,5.8) -- (0.4,5.8) -- cycle;
-    \filldraw [color=rouge_inria] (0,15) -- (4.8,15) -- (4.8,10) -- (0,10) -- cycle;
-    \node at (12.0,5.6) {\includegraphics[width=.05\textwidth]{beamertheme/img/Inr_logo_rouge.png}};  
-
+    \filldraw [color=rouge_inria]      (-.6,9.63) -- (-.6,5.63)  -- (3.4,5.63) -- (3.4,9.63) -- cycle;
   \end{tikzpicture}
-  % section number in top-left red square
-  
-  \begin{textblock*}{5cm}(60mm,45mm)
+ 
+  \begin{textblock*}{7.7cm}(4.5cm,4.5cm)
     {\textcolor{rouge_inria}{\LARGE \insertsection} }
   \end{textblock*}
-  \begin{textblock*}{13cm}(10mm,20mm)
+  \begin{textblock*}{3.4cm}(0.3cm,1cm)
+    \begin{center}
     {\textcolor{white} {{{\GRAND {\padzeroes[2]{\decimal{section}}}}}}}
+    \end{center}
   \end{textblock*}
 }
 
 \defbeamertemplate*{toc page}{inria}[1][]
 {
-  % \setbeamertemplate{footline}{
-  %   \vspace*{-0.025\paperheight}
-  %   \raisebox{12.5ex}{\textcolor{rouge_inria}{\hspace*{.8cm}\bf \insertframenumber~-\beamer@shorttitle - \beamer@shortauthor\hfill} }
-  % }
   \begin{tikzpicture}          
     \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
     \filldraw [color=white] (0,15) -- (12.8,15) -- (12.8,0) -- (0,0) -- cycle;
     \filldraw [color=gris_fonce_inria] (0.4,14.6) -- (12.4,14.6) -- (12.4,5.8) -- (0.4,5.8) -- cycle;
     \filldraw [color=rouge_inria] (0,15) -- (4.8,15) -- (4.8,10) -- (0,10) -- cycle;
-    \node at (12.0,5.6) {\includegraphics[width=.05\textwidth]{beamertheme/img/Inr_logo_rouge.png}};  
   \end{tikzpicture}
-  % section number in top-left red square
+
   \begin{textblock*}{10cm}(55mm,35mm)
     {\tableofcontents}
   \end{textblock*}
   \begin{textblock*}{13cm}(10mm,30mm)
-    {\textcolor{white} {
-        {\LARGE   Contents}
-      }}
+    {\textcolor{white} {{\LARGE   Contents}}}
   \end{textblock*}
 }
 
 \def\tocpage{\usebeamertemplate*{toc page}}
+
+\setbeamertemplate{section number projected}{default}
+
+\setbeamertemplate{items}[square]
+\setbeamertemplate{itemize items}{$\bullet$}
+\setbeamertemplate{itemize subitem}{$>$}
+\setbeamertemplate{itemize subsubitem}{$-$}
 
 
 \mode<all>
