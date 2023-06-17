@@ -1,9 +1,44 @@
+% The head- and footline.
+% The sidebars.
+% The logo.
+% The frame title
+
 \mode<presentation>
+% \setbeamertemplate{footline}{
+%   \ifnum\thepage>1\relax
+%     \vspace*{-0.025\paperheight}
+%     \raisebox{12.5ex}{\textcolor{gris_fonce_inria}{\hspace*{.8cm}\bf \insertframenumber~-\beamer@shorttitle - \beamer@shortauthor\hfill} }
+%   \fi
+% }
+
+
+\defbeamertemplate*{frametitle}{shadow theme}
+{
+  \hbox{\leavevmode
+    %\advance\beamer@leftmargin by -12bp%
+    %\advance\beamer@rightmargin by -12bp%
+    \beamer@tempdim=\textwidth%
+    %\advance\beamer@tempdim by \beamer@leftmargin%
+    %\advance\beamer@tempdim by \beamer@rightmargin%
+    %\hspace*{4cm}\vspace*{-1.5cm}\bf \small \insertframetitle\vspace*{0.1cm}%
+    \begin{textblock*}{10cm}(50mm, 0.5mm)
+      {\textcolor{rouge_inria}{ \insertframetitle} }
+    \end{textblock*}
+
+  }}
+
+
 \setbeamertemplate{footline}{
-                   \ifnum\thepage>1\relax
-                   \vspace*{-0.025\paperheight}
-\raisebox{12.5ex}{\textcolor{gris_fonce_inria}{\hspace*{.8cm}\bf \insertframenumber~-\beamer@shorttitle - \beamer@shortauthor\hfill} }
-                 \fi
-               }
+  \ifnum\thepage>1\relax
+    % \begin{textblock*}{10cm}(10mm, 10mm)
+    %   \textcolor{gris_fonce_inria}{\hspace*{.8cm} \insertframenumber\hfill}
+    % \end{textbock*}
+    \vspace*{-0.05\paperheight}
+    \raisebox{.2cm}{\textcolor{gris_fonce_inria}{\hspace*{.4cm} \insertframenumber\hfill} }
+    % \raisebox{12.5ex}{\textcolor{gris_fonce_inria}{\hspace*{.8cm}\bf \insertframenumber~-\beamer@shorttitle - \beamer@shortauthor\hfill} }
+  \fi
+}
+
+
 
 \mode<all>

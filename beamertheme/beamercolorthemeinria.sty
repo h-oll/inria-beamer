@@ -1,5 +1,10 @@
 
 \mode<presentation>
+
+\setbeamerfont{frametitle}{size=\normalsize}
+
+
+
 \definecolor{exampleColor}{HTML}{1c7c54}
 \definecolor{sectionColor}{RGB}{0,0,0}
 \definecolor{subsectionColor}{RGB}{0,0,0}
@@ -36,7 +41,14 @@
 \definecolor{alertTitleBlockColor}{RGB}{230,51,18}%{51,153,255}%{252,130,0}
 \definecolor{alertBlockTextColor}{RGB}{0,0,0}
 \definecolor{alertBlockTitleTextColor}{RGB}{255,255,255}
+
+\definecolor{rouge_inria} {RGB}{230,51,18}
+\definecolor{gris_fonce_inria}{RGB}{56,66,87}
+\definecolor{rouge2}{RGB}{230,68,57} 
+\definecolor{gris_clair_inria}{RGB}{217,217,217}
+
 \setbeamercolor{section in head/foot}{bg=sectionColor, fg=sectionTextColor}
+\setbeamercolor{section number projected}{bg=white,fg=rouge_inria}
 \setbeamercolor{subsection in head/foot}{bg=subsectionColor, fg=subsectionTextColor}
 \setbeamercolor*{block title}{fg=normalBlockTitleTextColor,bg=normalTitleBlockColor}
 \setbeamercolor*{block body}{fg=normalBlockTextColor,bg=normalBlockColor}
@@ -50,16 +62,15 @@
 \setbeamercolor*{example text}{fg=exampleTextColor}
 \setbeamercolor*{alerted text}{fg=alertTextColor}
 
-
 \setbeamercolor{author in head/foot}{bg=leftFootlineColor, fg=authorColor}
 \setbeamercolor{title in head/foot}{bg=rightFootlineColor, fg=footlineTitleColor}
 \setbeamercolor{institute in head/foot}{fg=instituteColor}
 \setbeamercolor{date in head/foot}{bg=rightFootlineColor, fg=dateColor}
 
-\definecolor{rouge_inria} {RGB}{230,51,18}
-\definecolor{gris_fonce_inria}{RGB}{56,66,87}
-\definecolor{rouge2}{RGB}{230,68,57} 
-\definecolor{gris_clair_inria}{RGB}{217,217,217}
+\setbeamercolor{itemize items}{fg=rouge_inria}
+\setbeamercolor{itemize subitems}{fg=rouge_inria}
+
+
 
 \newcommand{\blue}{\color{middleFootlineColor}}
 \newcommand{\green}{\color{exampleColor}}
