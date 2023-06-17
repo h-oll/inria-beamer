@@ -3,3 +3,8 @@
 2. =ln -s inria-beamer/beamertheme/beamerthemeinria.sty beamerthemeinria.sty=
 3. =ln -s inria-beamer/beamertheme beamertheme=
 4. In org mode, use =#+BEAMER_THEME: /inria=
+
+   
+* For org / qat
+1. Import repo as git submodule with name beamerthemeinria
+2. #+LATEX_HEADER:\usepackage{beamerthemeinria/beamerthemeinria}
